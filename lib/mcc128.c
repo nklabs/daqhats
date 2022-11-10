@@ -1180,7 +1180,7 @@ int mcc128_open(uint8_t address)
         }
 
         // ensure GPIO signals are initialized
-        gpio_dir(IRQ_GPIO, 1);
+        // gpio_dir(IRQ_GPIO, 1);
 
         gpio_write(RESET_GPIO, 0);
         gpio_dir(RESET_GPIO, 0);
