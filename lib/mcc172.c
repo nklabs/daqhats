@@ -1120,7 +1120,9 @@ int mcc172_open(uint8_t address)
         }
 
         // ensure GPIO signals are initialized
-        // gpio_dir(IRQ_GPIO, 1);
+#ifdef FW_UPDATE
+        gpio_dir(IRQ_GPIO, 1);
+#endif
 
         if (dev->reset_polarity == 0)
         {

@@ -7,7 +7,7 @@ INSTALL_DIR = /usr/local/lib
 BUILD_DIR = ./build
 
 CC = gcc
-CFLAGS = -I../include -I/opt/vc/include -I/usr/include -fPIC -Wall -Wextra -g -O2 -DENABLE_LOCALES=Off
+CFLAGS = -I../include -I/opt/vc/include -I/usr/include -fPIC -Wall -Wextra -g -O2 -DENABLE_LOCALES=Off $(EXTRA_CFLAGS)
 LDFLAGS = -L/opt/vc/lib -zdefs -shared -pthread -Wl,-soname,lib$(NAME).so.$(MAJOR)
 DEPLIBS = -lm -lbcm_host
 RM = rm -f
